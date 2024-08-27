@@ -1,0 +1,453 @@
+.home{
+    width: 100%;
+    min-height: 80svh;
+    background: #fff;
+}
+
+/*RED CONTAINER*/
+.home__main{
+    padding: 1rem;
+    margin: 2rem;
+    border-radius: 25px;
+    background: linear-gradient(180deg, rgba(173, 22, 11, 1) 0%, rgba(230, 38, 35, 1) 50%, rgba(255, 135, 136, 1) 100%);
+}
+
+/*NAVIGATION BAR*/
+nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 3rem;
+}
+
+/*LOGO*/
+.home__main-logo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.home__main-logo img{
+    width: 68px;
+    height: auto;
+}
+
+.home__main-logo p{
+    font-family: var(--font-text);
+    font-size: clamp(1.81rem, 0.8071rem + 1.1143vw, 2.2rem);
+    font-weight: 500;
+    color: #fff;
+}
+
+
+/*LINKS*/
+.links{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+}
+
+.links a{
+    text-decoration: none;
+    font-family: var(--font-text);
+    font-size: clamp(1rem, 0.4857rem + 0.5714vw, 1.2rem);
+    color: #fff;
+}
+
+.burguer, .contact-link{
+    display: none;
+ }
+
+/*title*/
+.home__main-title{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+/*img over title*/
+.img_container{
+    width: 780px;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 27%;
+}
+
+.device {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*title*/
+.home__main h1{
+    font-family: var(--font-title);
+    font-size: clamp(10rem, -1.5714rem + 12.8571vw, 14.5rem);
+    font-weight: 600;
+    color: #fff;
+    margin-top: 2.5rem;
+}
+
+/*text container*/
+.home__main-content{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 5rem;
+}
+
+/*columns*/
+.home__main-content div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+    padding: 0 4vw;
+}
+
+/*text*/
+.home__main-content p{
+    max-width: 290px;
+    font-family: var(--font-text);
+    font-size: clamp(1rem, 0.4857rem + 0.5714vw, 1.2rem);
+    font-weight: 500;
+    color: #fff;
+    text-align: center;
+}
+
+
+/*img 360*/
+.home__main-content img{
+    width: 130px;
+    height: auto;
+}
+
+/*+2M text*/
+.home__main-content .users{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+}
+
+.users h3{
+    font-family: var(--font-title);
+    font-size: clamp(3.5rem, 0.9286rem + 2.8571vw, 4.5rem);
+    line-height: 45px;
+    color: #000000;
+}
+
+.users p{
+    font-family: var(--font-text);
+    color: #232323;
+    font-weight: 700;
+}
+
+.home__main-content .content-small_devices{
+    display: none;
+}
+
+
+/*responsive desing*/
+
+@media only screen and (max-width:1660px){
+
+    /*img over title*/
+    .img_container{
+        width: 650px;
+        height: auto;
+    }
+
+    /*columns*/
+    .home__main-content div{
+        gap: 2rem;
+        padding: 0 3vw;
+    }
+
+    .home__main h1{
+        font-size: 9rem;
+    }
+}
+
+/*DESTOCKS*/
+@media only screen and (max-width:1440px){
+
+    .home__main-logo img{
+        width: 58px;
+        height: auto;
+    }
+
+    .home__main-logo p{
+        font-size: 1.5rem;
+    }
+
+    .home__main h1{
+        font-size: 8rem;
+    }
+
+     /*img over title*/
+     .img_container{
+        width: 600px;
+        height: auto;
+        left: 25%;
+    }
+
+    /*columns*/
+    .home__main-content div{
+        gap: 1.5rem;
+        padding: 0 2vw;
+    }
+
+    
+    /*text*/
+    .home__main-content p{
+        max-width: 200px;
+        font-weight: 600;
+    }
+
+    /*img 360*/
+    .home__main-content img{
+        width: 100px;
+        height: auto;
+    }
+}
+
+@media only screen and (max-width:1200px){
+    
+    /*img over title*/
+    .img_container{
+        width: 500px;
+        height: auto;
+        left: 23%;
+    }
+
+    .home__main h1{
+        font-size: 7rem;
+    }
+}
+
+/*NOTEBOOKS*/
+@media only screen and (max-width:1023px){
+
+     /*RED CONTAINER*/
+     .home__main{
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        border-radius: 0;
+        background: linear-gradient(180deg, rgba(173, 22, 11, 1) 0%, rgba(230, 38, 35, 1) 50%, rgba(255, 135, 136, 1) 100%);
+    }
+
+    .home .vr-btn{
+        display: none;
+    }
+    
+     /*display burguer menu*/
+     .burguer, .contact-link{
+        display: flex;
+    }
+
+    /*NAVIGATION BAR*/
+    nav{
+        background: #232323;
+        padding: 1.2rem 1rem;
+    }
+
+    /*LOGO*/
+    .home__main-logo{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .home__main-logo img{
+        width: 58px;
+        height: auto;
+    }
+
+    .home__main-logo p{
+        font-size: 1.5rem;
+    }
+
+    /*links*/
+    .links {
+        position: absolute;
+        top: -700px;
+        right: -2000px;
+        text-align: center;
+        padding: 1rem;
+        margin-right: 1rem;
+        background: #232323;
+    }
+
+    .links a{
+        font-size: 1.1rem;
+        font-weight: 500;
+        text-align: right;
+    }
+
+    .links.active{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: right;
+        gap: 0.5rem;
+        top: 90px;
+        right: 0.5rem;
+        cursor: pointer;
+        z-index: 1;
+    }
+
+    .home__main-title{
+        position: inherit;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+
+    .home__main-title h1{
+        max-width: 300px;
+        line-height: 90px;
+        letter-spacing: 2px;
+        margin-top: 3rem;
+    }
+
+    .home__main-title .img_container{
+        position: inherit;
+        max-width: 450px;
+        height: auto;
+    }
+
+    /*text container*/
+    .home__main-content{
+        justify-content: center;
+        gap: 1.5rem;
+        padding-bottom: 3rem;
+        padding-top: 1.5rem;
+    }
+
+    .home__main-content .users_data, .home__main-content .arrows{
+        display: none;
+    }
+
+    .home__main-content .content-small_devices{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 3rem;
+    }
+
+    .content-small_devices .users_360{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .home__main-content .users h4{
+        font-family: var(--font-text);
+        font-size: 1.2rem;
+    }
+
+    .content-small_devices p{
+        max-width: 440px;
+        font-size: 1.2rem;
+    }
+    
+
+}
+
+/*TABLETS*/
+@media only screen and (max-width:768px){
+    
+    nav{
+        height: 10svh;
+        padding: 0.5rem 1rem;
+    }
+
+    .home__main-logo{
+        gap: 0.5rem;
+    }
+
+    .home__main-logo img{
+        width: 48px;
+        height: auto;
+    }
+    
+    .links.active{
+        top: 75px;
+    }
+
+    .home__main-title h1{
+        font-size: 6rem;
+        line-height: 75px;
+    }
+
+    .img_container{
+        width: 350px;
+    }
+
+    .home__main-content {
+        gap: 5rem;
+    }
+
+    .home__main-content .users{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .home__main-content .users h3{
+        font-size: 3rem;
+        line-height: 22px;
+        margin: 0.5rem 0;
+    }
+
+    .home__main-content .users h4{
+        line-height: 22px;
+        margin: 0;
+    }
+
+    .content-small_devices p{
+        max-width: 330px;
+        font-size: 1.1rem;
+    }
+}
+
+/*SMARTH PHONES*/
+@media only screen and (max-width:380px){
+
+    .links.active{
+        top: 59px;
+    }
+
+    .home__main-title h1{
+        font-size: 5rem;
+        line-height: 60px;
+        padding: 0;
+        margin: 0;
+        margin-top: 3rem;
+    }
+
+    .img_container{
+        width: 300px;
+        padding: 0.5rem;
+    }
+
+    .home__main-content {
+        gap: 4rem;
+        padding-bottom: 1rem;
+    }
+
+}

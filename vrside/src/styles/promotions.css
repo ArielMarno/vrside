@@ -1,0 +1,313 @@
+/*component container*/
+.promotions{
+    width: 100%;
+    min-height: 100svh;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-items: center;
+    padding: 5rem 3rem;
+}
+
+/*card container*/
+.promotions__card{
+    background: linear-gradient(180deg, rgba(173, 22, 11, 1) 0%, rgba(230, 38, 35, 1) 50%, rgba(255, 135, 136, 1) 100%);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-items: center;
+    padding: 0 2rem;
+    border-radius: 35px;
+}
+
+.card_content{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+    color: #fff;
+}
+
+/*title*/
+.card_content h2{
+    font-family: var(--font-title);
+    font-size: clamp(4rem, 1.4286rem + 2.8571vw, 5rem);
+    font-weight: 500;
+    line-height: 80px;
+}
+
+/*text*/
+.card_content p{
+    font-family: var(--font-text);
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.card_content .card_input{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+/*input*/
+.card_input input{
+    font-family: var(--font-text);
+    font-size: 1.2rem;
+    color: #fff;
+    width: 500px;
+    height: 75px;
+    padding: 1rem;
+    background: rgb(0, 0, 0, 0.4);
+    border: none;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+
+.card_input input::placeholder{
+    color: #fff;
+}
+
+/*card btn*/
+.card_input a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #232323;
+    font-family: var(--font-text);
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-decoration: none;
+    color: #fff;
+    height: 75px;
+    width: 150px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+/*image container*/
+.card_input .card_img{
+    width: 100%;
+    height: 100%;
+}
+
+/*imagen*/
+.card_img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/*responsive desing*/
+
+/*DESTOCKS*/
+@media only screen and (max-width:1440px){
+
+    .promotions{
+        min-height: 90svh ;
+    }
+
+    .card_content h2{
+        font-size: clamp(3rem, 0.5301rem + 3.8554vw, 4rem);
+    }
+
+    .card_content p{
+        font-size: clamp(1.3rem, -0.4289rem + 2.6988vw, 2rem);
+    }
+
+    .card_content .card_input{
+        max-width: 80%;
+        padding-bottom: 1rem;
+    }
+    
+    /*input*/
+    .card_input input{
+        font-size: 1rem;
+        color: #fff;
+        max-width: 500px;
+        height: 70px;
+        padding: 0.5rem 1.5rem;
+    }
+    
+    /*card btn*/
+    .card_input a{
+        font-size: 1rem;
+        font-weight: 500;
+        height: 70px;
+        width: 150px;
+    }
+
+    .card_img img{
+        min-width: 400px;
+    }
+
+}
+
+/*NOTEBOOKS*/
+@media only screen and (max-width:1200px){
+
+    .promotions{
+        min-height: 80svh ;
+    }
+
+    .card_content h2{
+        font-size: 2.5rem;
+        line-height: 40px;
+    }
+
+    .card_content p{
+        font-size: 1.2rem;
+    }
+
+    .card_content .card_input{
+        max-width: 70%;
+        padding-bottom:0.5rem;
+    }
+    
+    /*input*/
+    .card_input input{
+        max-width: 300px;
+        height: 65px;
+        padding: 0.5rem 1.5rem;
+    }
+    
+    /*card btn*/
+    .card_input a{
+        height: 65px;
+        width: 200px;
+    }
+
+    .card_img img{
+        min-width: 300px;
+    }
+}
+
+
+/*NOTEBOOKS*/
+@media only screen and (max-width:1025px){
+    
+    .promotions__card{
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 3rem 1.5rem;
+    }
+
+    .card_content h2{
+        font-size: 3.5rem;
+        line-height: 60px;
+    }
+
+    .card_content p{
+        font-size: 1.5rem;
+    }
+
+    .card_content .card_input{
+        max-width: 90%;
+    }
+    
+    /*input*/
+    .card_input input{
+        max-width: 350px;
+        height: 65px;
+        padding: 0.5rem 1.5rem;
+    }
+    
+    /*card btn*/
+    .card_input a{
+        height: 65px;
+        width: 170px;
+    }
+
+    .card_img img{
+        width: 450px;
+    }
+}
+
+/*TABLETS*/
+@media only screen and (max-width:768px){
+
+    .promotions{
+        padding: 3rem 1rem;
+    }
+
+    .promotions__card{
+        gap: 1.5rem;
+        padding: 3rem 1rem;
+    }
+
+    .card_content h2{
+        font-size: 3rem;
+        line-height: 60px;
+    }
+
+    .card_content p{
+        font-size: 1.3rem;
+    }
+    
+    /*input*/
+    .card_input input{
+        max-width: 220px;
+        height: 60px;
+        padding: 0.5rem 1.5rem;
+    }
+    
+    /*card btn*/
+    .card_input a{
+        height: 60px;
+        width: 100px;
+    }
+
+    .card_img img{
+        width: 400px;
+    }
+}
+
+/*SMARTH PHONES*/
+@media only screen and (max-width:480px){
+
+    .promotions{
+        width: 100%;
+        padding: 3rem 0.5rem;
+    }
+
+    .promotions__card{
+        width: 95%;
+        gap: 1rem;
+        padding: 2.5rem 1rem;
+
+    }
+
+    .card_content h2{
+        max-width: 100%;
+        font-size: 1.9rem;
+        line-height: 40px;
+    }
+
+    .card_content p{
+        max-width: 100%;
+        font-size: 1.1rem;
+    }
+    
+    /*input*/
+    .card_input input{
+        max-width: 180px;
+        height: 50px;
+        padding: 0.5rem 1.5rem;
+    }
+
+    .card_input input::placeholder{
+        font-size: 0.9rem;
+    }
+    
+    /*card btn*/
+    .card_input a{
+        height: 50px;
+        width: 120px;
+        font-size: 0.8rem;
+    }
+
+    .card_img img{
+        width: 280px;
+    }
+}

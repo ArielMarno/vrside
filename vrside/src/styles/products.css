@@ -1,0 +1,173 @@
+.products{
+    width: 100%;
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center ;
+    gap: 3rem;
+    padding: 3rem 2rem;
+}
+
+.products__title{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.products__title h2{
+    font-family: var(--font-title);
+    font-size: clamp(6rem, 3.4286rem + 2.8571vw, 7rem);
+    font-weight: 500;
+    text-align: center;
+    line-height: 100px;
+    color: #232323;
+}
+
+.products__title p{
+    font-family: var(--font-text);
+    font-size: 1.5rem;
+    font-weight: 500;
+    max-width: 600px;
+    text-align: center;
+    color: #575757;
+}
+
+.products__grid{
+    display: grid;
+    grid-template-columns:  repeat(2, 1fr);
+    grid-template-rows: 300px;
+    gap: 1rem;
+    justify-items: center;
+}
+
+.products__grid .card-col:nth-child(1){
+    grid-row-start: span 2;
+}
+
+.products__grid .vr-btn a{
+    color: #232323;
+    border-color: #232323;
+}
+
+.products__grid .vr-btn .arrow {
+    background: #232323;
+}
+
+.card-col h3, .card-row h3{
+    font-family: var(--font-title);
+    font-size: clamp(4rem, 1.4286rem + 2.8571vw, 5rem);
+    font-weight: 500;
+    line-height: 80px;
+    max-width: 250px;
+}
+
+.card-col{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    background: #f2f2f2;
+    padding: 3rem 1.5rem;
+    border-radius: 25px;
+}
+
+.card-col .aside_content{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+}
+
+.card-row {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 0.5rem;
+    background: #f2f2f2;
+    padding: 2rem 1.5rem;
+    border-radius: 25px;
+}
+
+.card-row .aside_content{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+}
+
+.card-row img {
+    max-width: 350px;
+    height: auto;
+}
+
+
+/*diseño adaptable*/
+
+/*DESTOCKS*/
+@media only screen and (max-width:1300px){
+
+    .products__grid{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 300px;
+        gap: 1rem;
+        justify-items: center;
+    }
+}
+
+/*TABLETS*/
+@media only screen and (max-width:768px){
+
+    .products{
+        gap: 2rem;
+        padding: 1.5rem 1rem;
+        margin-top: 5rem;
+    }
+
+    .products__title h2{
+        font-size: 4rem;
+        line-height: 70px;
+    }
+    
+    .products__title p{
+        font-size: 1.2rem;
+    }
+
+    .card-col, .card-row{
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .card-col h3, .card-row h3{
+        font-size: 3rem;
+        line-height: 60px;
+        max-width: 100%;
+    }
+
+    .card-row br{
+        display: none;
+    }
+
+    .card-col img, .card-row img{
+        max-width: 350px;
+        height: auto;
+    }
+}
+
+/*SMARTH PHONES*/
+@media only screen and (max-width:480px){
+
+    .products__title p{
+        font-size: 1rem;
+    }
+
+    .card-col img, .card-row img{
+        max-width: 280px;
+        height: auto;
+    }
+}
+

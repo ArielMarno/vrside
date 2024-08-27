@@ -1,0 +1,118 @@
+.brands{
+    min-height: 30svh;
+    width: 100%;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 1.5rem;
+}
+
+.brands img{
+    width: 15%;
+    aspect-ratio: 5/2;
+    object-fit: contain;
+    opacity: 60%;
+}
+
+
+.brands_first-row{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 15vw;
+    margin-right: 20vw
+}
+
+.brands_second-row{
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 15vw;
+    margin-left: 10vw;
+}
+
+
+/*responsive desing*/
+
+/*DESTOCKS*/
+@media only screen and (max-width:1440px){
+
+   
+}
+
+/*NOTEBOOKS*/
+@media only screen and (max-width:1023px){
+
+    .brands img{
+        width: 15%;
+        aspect-ratio: 3/2;
+    }
+
+    .brands_first-row{
+        gap: 10vw;
+        margin-right: 15vw
+    }
+    
+    .brands_second-row{
+        gap: 10vw;
+        margin-left: 10vw;
+    }
+}
+
+/*TABLETS*/
+@media only screen and (max-width:768px){
+
+    .brands{
+        padding: 1.5rem 0;
+        gap: 1rem;
+    }
+
+    .brands img{
+        width: 25%;
+        aspect-ratio: 5/2;
+    }
+
+    .brands_first-row{
+        width: 90%;
+        gap: 1rem;
+        margin-right: 0;
+        padding: 0;
+    }
+    
+    .brands_second-row{
+        width: 90%;
+        gap: 1rem;
+        margin-left: 0;
+        padding: 0;
+    }
+}
+
+/*SMARTH PHONES*/
+@media only screen and (max-width:380px){
+
+    .brands img{
+        width: 25%;
+        aspect-ratio: 3/2;
+    }
+
+
+    .brands_first-row{
+        gap: 1.5rem;
+        margin-right: 0;
+        padding: 0.3rem;
+    }
+    
+    .brands_second-row{
+        gap: 1.5rem;
+        margin-left: 0;
+        padding: 0.3rem;
+    }
+
+}
+
+

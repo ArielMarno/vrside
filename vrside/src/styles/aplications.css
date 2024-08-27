@@ -1,0 +1,139 @@
+/*main container*/
+.aplications {
+    width: 100%;
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 2rem;
+}
+
+/*title and btn container*/
+.aplications__title{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 11vw;
+    color: #232323;
+}
+
+/*title*/
+.aplications__title h2{
+    font-family: var(--font-title);
+    font-size: clamp(6rem, 3.4286rem + 2.8571vw, 7rem);
+    font-weight: 500;
+}
+
+/*btn*/
+.aplications__title .vr-btn a{
+    color: #232323;
+    border-color: #232323;
+    font-weight: 500;
+}
+
+.aplications__title a:last-child{
+    background-color: #232323;
+}
+
+/*cards container*/
+.aplications__cards{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+/*cards*/
+.aplications .card {
+    display: flex;
+    flex: 1 1 450px;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 0.5rem;
+    max-width: 450px;
+    height: 500px;
+    background: #f2f2f2;
+    border-radius: 25px;
+}
+
+/*card image*/
+.aplications .card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 25px;
+}
+
+
+/*card title*/
+.aplications .card h3{
+    font-family: var(--font-title);
+    font-size: clamp(1.8rem, 1.2857rem + 0.5714vw, 2rem);
+    font-weight: 500;
+    padding: 0 1.5rem;
+    margin-top: 2rem ;
+}
+
+/*card text*/
+.aplications .card p{
+    font-family: var(--font-text);
+    font-size: clamp(1.1rem, 0.8429rem + 0.2857vw, 1.2rem);
+    padding: 0 1.5rem;
+    margin-bottom: 2rem;
+}
+
+
+
+
+/*responsive desing*/
+
+/*NOTEBOOKS*/
+@media only screen and (max-width:1023px){
+
+    /*title and btn container*/
+    .aplications__title{
+        padding: 0;
+    }
+
+    /*title*/
+    .aplications__title h2{
+        font-size: 5rem;
+    }
+}
+
+@media only screen and (max-width: 1003px) {
+    /*title and btn container*/
+    .aplications__title{
+        flex-direction: column;
+    }
+}
+
+/*TABLETS*/
+@media only screen and (max-width:768px){
+
+    .aplications{
+        padding: 1.5rem 1rem;
+    }
+
+    /*title*/
+    .aplications__title h2{
+        font-size: 4rem;
+    }
+}
+
+/*SMARTH PHONES*/
+@media only screen and (max-width:480px){
+
+    /*title*/
+    .aplications__title h2{
+        font-size: 3rem;
+    }
+}

@@ -1,0 +1,214 @@
+/*component container*/
+.testimonies{
+    background-color: #232323;
+    width: 100%;
+    min-height: 100svh;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-items: center;
+    gap: 0.5rem;
+    padding: 5rem 3rem;
+}
+
+/*title and arrows container*/
+.testimonies__title{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10vw;
+}
+
+
+/*title*/
+.testimonies__title h2{
+    font-family: var(--font-title);
+    font-size: clamp(6rem, 3.4286rem + 2.8571vw, 7rem);
+    font-weight: 500;
+    text-align: center;
+    color: #fff;
+}
+
+/*arrows*/
+.testimonies__title .arrows{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.fa-solid{
+    font-size: 5rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+/*carousel cards*/
+.testimonies .card{
+    background: #f2f2f2;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+    padding: 2rem;
+    width: 350px;
+    height: 450px;
+}
+
+.testimonies  .card img{
+    width: 100px;
+    height: auto;
+    border-radius: 100%;
+}
+
+.testimonies .card h3{
+    font-family: "Lily Script One", system-ui;
+    font-size: 100px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #4d4d4d;
+    padding-top: 3rem;
+}
+
+.testimonies .card p{
+    font-family: var(--font-text);
+    font-size: 1.3rem;
+}
+
+.testimonies .card h4{
+    font-family: var(--font-text);
+    font-size: 1.5rem;
+}
+
+/*container carousel*/
+.testimonies__carousel{
+    max-width: 1100px;
+    display: grid;
+    grid-auto-flow: column;
+    overflow-x: auto;
+    border-radius: 20px;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    overflow-y: hidden;
+    touch-action: none;
+    gap: 1.5rem;
+}
+
+.testimonies__carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.testimonies__carousel.no-transition {
+    scroll-behavior: auto;
+}
+
+.testimonies__carousel.dragging {
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+}
+
+.testimonies__carousel.dragging .card {
+    cursor: grab;
+    user-select: none;
+}
+
+/*responsive desing*/
+
+/*DESTOCKS*/
+@media only screen and (max-width:1140px){
+    
+    .testimonies{
+        padding: 5rem 2rem;
+    }
+
+    /*title and arrows container*/
+    .testimonies__title{
+        gap: 5vw;
+    }
+
+
+    .testimonies__title h2{
+        font-size: 5rem;
+    }
+    
+    .fa-solid{
+        font-size: 4rem;
+    }
+
+    /*container carousel*/
+    .testimonies__carousel{
+        max-width: 740px;
+        gap: 1.3rem;
+    }
+    
+}
+
+/*TABLETS*/
+@media only screen and (max-width:780px){
+    
+    .testimonies{
+        min-height: 90svh;
+        padding: 4rem 1rem;
+        gap: 3rem;
+    }
+
+    /*title and arrows container*/
+    .testimonies__title{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+
+
+    .testimonies__title h2{
+        font-size: 4rem;
+    }
+    
+    .fa-solid{
+        font-size: 3rem;
+    }
+
+    .testimonies .card{
+        gap: 1rem;
+        padding: 1.5rem;
+        width: 300px;
+        height: 400px;
+    }
+
+    .testimonies .card p{
+        font-size: 1rem;
+        font-weight: 500;
+    }
+
+    .testimonies .card h4{
+        font-size: 1.3rem;
+    }
+
+    /*container carousel*/
+    .testimonies__carousel{
+        max-width: 300px;
+        gap: 0;
+        touch-action: auto;
+    }
+}
+
+/*SMARTH PHONES*/
+@media only screen and (max-width:480px){
+
+    .testimonies{
+        min-height: 80svh;
+        padding: 5rem 1rem;
+    }
+
+    .testimonies__title h2{
+        font-size: 3rem;
+    }
+
+    .fa-solid{
+        font-size: 2.5rem;
+    }
+}
